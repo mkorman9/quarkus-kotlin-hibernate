@@ -32,3 +32,9 @@ class DuckGroup(
         return id.hashCode()
     }
 }
+
+data class DuckGroupDto(
+    val id: UUID,
+    val name: String,
+    val createdAt: Instant
+)

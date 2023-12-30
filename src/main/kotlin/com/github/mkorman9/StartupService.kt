@@ -23,6 +23,7 @@ class StartupService(
         log.info("Adding Daisy duck")
         duckService.addDuck("Daisy", 6, pirates)
 
-        log.info("Ducks in group: ${duckService.findDucksInGroup(pirates.id)}")
+        log.info("Duck groups: ${duckService.findDuckGroups()}")
+        log.info("Ducks in group Pirates: ${duckService.findDucksInGroup(pirates.id)}")
     }
 }
