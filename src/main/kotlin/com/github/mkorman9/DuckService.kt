@@ -25,8 +25,7 @@ class DuckService(
         val duckGroup = DuckGroup(
             id = ID_GENERATOR.generate(),
             name = name,
-            createdAt = Instant.now(),
-            ducks = mutableListOf()
+            createdAt = Instant.now()
         )
         entityManager.persist(duckGroup)
         return duckGroup

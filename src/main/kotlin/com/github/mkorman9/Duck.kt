@@ -28,4 +28,12 @@ class Duck(
     @ManyToOne
     @JoinColumn(name = "group_id")
     var group: DuckGroup?
-)
+) {
+    override fun equals(other: Any?): Boolean {
+        return id == (other as? Duck)?.id
+    }
+
+    override fun hashCode(): Int {
+        return id.hashCode()
+    }
+}

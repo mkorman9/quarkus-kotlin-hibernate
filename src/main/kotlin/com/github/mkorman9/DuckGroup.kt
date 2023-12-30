@@ -22,5 +22,13 @@ class DuckGroup(
     val createdAt: Instant,
 
     @OneToMany(mappedBy = "group")
-    val ducks: MutableList<Duck>
-)
+    val ducks: MutableSet<Duck> = mutableSetOf()
+) {
+    override fun equals(other: Any?): Boolean {
+        return id == (other as? Duck)?.id
+    }
+
+    override fun hashCode(): Int {
+        return id.hashCode()
+    }
+}
