@@ -15,13 +15,13 @@ class Duck(
     val id: UUID,
 
     @Column(name = "name")
-    val name: String,
+    var name: String,
 
     @Column(name = "height")
-    val height: Int,
+    var height: Int,
 
     @Column(name = "created_at")
-    val createdAt: Instant
+    var createdAt: Instant
 ) {
     override fun toString(): String {
         return "${name}(id = ${id}, height = ${height}, createdAt = ${createdAt})"
